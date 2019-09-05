@@ -1,0 +1,43 @@
+Overall character occurences:
+ : 300
+x: 161
+t: 126
+j: 123
+m: 114
+p: 107
+c: 96
+r: 87
+b: 83
+n: 68
+v: 64
+g: 49
+w: 38
+,: 37
+y: 30
+a: 29
+l: 27
+i: 26
+u: 25
+h: 23
+f: 18
+e: 15
+q: 12
+;: 9
+.: 7
+d: 6
+o: 6
+': 4
+\n: 3
+k: 3
+s: 1
+z: 1
+--------------------
+Bigram occurences:
+g: 8
+x: 4
+c: 3
+o: 3
+\n: 1
+r: 1
+--------------------
+Trigram occurences:
