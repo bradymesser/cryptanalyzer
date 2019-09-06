@@ -9,3 +9,6 @@ run:
 
 clean:
 	rm output.txt aliceCh4Output.txt aliceCh8Output.txt
+
+decrypt:
+	python3 decrypt.py inputText.txt
