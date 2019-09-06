@@ -64,9 +64,8 @@ for char in frequencies:
 usedMatches = {}
 alphabetList = list()
 j = 0
-cont = True
 while cont:
-    for i in range(1):
+    for i in range(10):
         for char in text:
             if char in chars:
                 if char not in usedMatches.keys():
@@ -75,8 +74,8 @@ while cont:
                         choice = random.choice(possibleMatches[char])
                         j+=1
                         if j >= 26:
-                            # print("please write better code you suck at programming")
-                            choice = "(" + possibleMatches[char][0] + ")"
+                            print("please write better code you suck at programming")
+                            choice = possibleMatches[char][0]
                             j = 0
                             break
                     # if choice not in usedMatches.values():
@@ -84,20 +83,14 @@ while cont:
         alphabetList.append(usedMatches.copy())
         usedMatches.clear()
 
-# print("Alphabets generated.")
-    print("")
-    for alphabet in alphabetList:
-        for char in text:
-            if char in chars:
-                sys.stdout.write(alphabet[char])
-            else:
-                sys.stdout.write(char)
-        sys.stdout.write("******************************\n")
-    sys.stdout.write("Use this alphabet? (y/n)")
-    temp = input()
-    if temp == 'y':
-        cont = False
-    alphabetList.clear()
+print("Alphabets generated.")
+# for alphabet in alphabetList:
+#     for char in text:
+#         if char in chars:
+#             sys.stdout.write(alphabet[char])
+#         else:
+#             sys.stdout.write(char)
+#     sys.stdout.write("******************************\n")
 
 output = open("dcOut.txt", "w")
 
