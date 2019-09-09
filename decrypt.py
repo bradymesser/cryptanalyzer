@@ -6,9 +6,10 @@ def getMatches(char, freq, actual):
     # print("Matches for " + char)
     matches = list()
     for item in actual:
-        if abs(actual[item] - freq) <= 2:
+        if abs(actual[item] - freq) <= 3:
             matches.append(item)
     return matches
+
 
 if len(sys.argv) != 2:
     print("Incorrect usage.  Correct usage is python3 decrypt.py inputText.txt\n")
@@ -63,6 +64,7 @@ for char in frequencies:
 
 usedMatches = {}
 alphabetList = list()
+usedAlphabets = list()
 j = 0
 cont = True
 while cont:
@@ -87,12 +89,16 @@ while cont:
 # print("Alphabets generated.")
     print("")
     for alphabet in alphabetList:
-        for char in text:
-            if char in chars:
-                sys.stdout.write(alphabet[char])
-            else:
-                sys.stdout.write(char)
-        sys.stdout.write("******************************\n")
+        if alphabet not in usedAlphabets:
+            usedAlphabets.append(alphabet.copy())
+            for char in text:
+                if char in chars:
+                    sys.stdout.write(alphabet[char])
+                else:
+                    sys.stdout.write(char)
+            sys.stdout.write("******************************\n")
+        else:
+            print("ALPHABET USED ALREADY")
     sys.stdout.write("Use this alphabet? (y/n)")
     temp = input()
     if temp == 'y':
