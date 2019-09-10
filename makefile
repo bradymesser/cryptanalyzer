@@ -8,7 +8,10 @@ run:
 	mv output.txt aliceCh8Output.txt
 
 clean:
-	rm output.txt aliceCh4Output.txt aliceCh8Output.txt
+	rm output.txt aliceCh4Output.txt aliceCh8Output.txt dcOut.txt
 
 decrypt:
 	python3 decrypt.py inputText.txt
+
+translate:
+	python3 translate.py inputText.txt
